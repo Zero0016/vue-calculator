@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="button.css">
+</head>
+<body>
+
+<div class="contain" id="calc" style="width: 300px;height: 400px;box-shadow: 0 0 10px black;text-align: center;margin: auto">
+    <h1>{{ans}}:<br>{{num}}</h1>
+    <input
+            type="number"
+            v-bind:placeholder="val"
+            style="width: 100px"
+            v-bind:value="space"
+            v-on:input="getNum1"
+    >
+    <input
+            type="number"
+           v-bind:placeholder="val"
+           style="width: 100px"
+            v-bind:value="space"
+           v-on:input="getNum2"
+    >
+
+    <button class="custom-btn btn-8" style="width: 75px" v-on:click="plus">+</button>
+    <button class="custom-btn btn-5" style="width: 75px" v-on:click="minus">-</button>
+    <button class="custom-btn btn-9" style="width: 75px" v-on:click="divis">/</button>
+    <button class="custom-btn btn-16" style="width: 75px" v-on:click="mult">*</button>
+
+</div>
+
+
+
+
+<script src="https://unpkg.com/vue@3"></script>
+<script src="main.js"></script>
+</body>
+</html>
